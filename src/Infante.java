@@ -7,7 +7,9 @@ public class Infante {
     String curp, nombre, sexo, fecha, estado;
 
     
-
+      public Infante(){
+        
+    }
     public Infante(String curp, String nombre, String sexo, String fecha, String estado) {
         this.curp = curp;
         this.nombre = nombre;

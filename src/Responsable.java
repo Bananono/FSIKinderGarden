@@ -8,6 +8,9 @@ public class Responsable {
     static String curps = "SELECT curpr FROM responsables ORDER BY curpr";
    String curpr, nombrer, sexor, telefono, parentesco, estador;
 
+   public Responsable(){
+       
+   }
     public Responsable(String curpr, String nombrer, String sexor, String telefono, String parentesco, String estador) {
         this.curpr = curpr;
         this.nombrer = nombrer;

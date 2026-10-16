@@ -7,7 +7,9 @@ public class Bitacora {
     static String todos = "SELECT * FROM bitacora ORDER BY folio DESC";
     String folio, tiempo, tipo, observaciones, infantesC, responsablesC, educadoresC;
     
-
+    public Bitacora(){
+        
+    }
     public Bitacora(String folio, String tiempo, String tipo, String observaciones, String infantes_curpr, String responsables_curpr, String educadores_curpe) {
         this.folio = folio;
         this.tiempo = tiempo;

@@ -26,6 +26,15 @@ public class JDEducadores extends javax.swing.JFrame {
         this.cnx = cnx;
 
     }
+    
+    public void obtenerEducador(Educador edu){
+        jtCurpE.setText(edu.curpe);
+        jtNombreE.setText(edu.nombree);
+        jcbSexoE.setSelectedItem(edu.sexoe);
+        jtTelefonoE.setText(edu.telefonoe);
+        jtDireccionE.setText(edu.direccion);
+        cboEstado.setSelectedItem(edu.estado);
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -89,12 +98,15 @@ public class JDEducadores extends javax.swing.JFrame {
         getContentPane().add(btnRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 350, -1, -1));
 
         jButton2.setText("Actualizar");
+        jButton2.addActionListener(this::jButton2ActionPerformed);
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 350, -1, -1));
 
         jButton3.setText("Borrar");
+        jButton3.addActionListener(this::jButton3ActionPerformed);
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 350, -1, -1));
 
         jButton1.setText("Cancelar");
+        jButton1.addActionListener(this::jButton1ActionPerformed);
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 350, -1, -1));
 
         cboEstado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Activo", "Pasivo", " " }));
@@ -118,6 +130,36 @@ public class JDEducadores extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Error de Registro");
         }
     }//GEN-LAST:event_btnRegistrarActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        Educador edu = new Educador(
+        jtCurpE.getText(), jtNombreE.getText(), jcbSexoE.getSelectedItem().toString(),
+       jtTelefonoE.getText(), jtDireccionE.getText(), cboEstado.getSelectedItem().toString());
+        
+        if (edu.actualizar(cnx.con)==1) {
+            JOptionPane.showMessageDialog(this, "Educador Actualizado");
+            this.dispose();
+        } else {
+            JOptionPane.showMessageDialog(this, "Error de Registro");
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        Educador edu = new Educador(
+        jtCurpE.getText(), jtNombreE.getText(), jcbSexoE.getSelectedItem().toString(),
+       jtTelefonoE.getText(), jtDireccionE.getText(), cboEstado.getSelectedItem().toString());
+        
+        if (edu.borrar(cnx.con)==1) {
+            JOptionPane.showMessageDialog(this, "Educador Actualizado");
+            this.dispose();
+        } else {
+            JOptionPane.showMessageDialog(this, "Error de Registro");
+        }
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+       this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

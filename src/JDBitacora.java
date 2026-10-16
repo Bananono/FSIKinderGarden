@@ -32,6 +32,16 @@ public class JDBitacora extends javax.swing.JDialog {
         cnx.seleccionar(Responsable.curps, cboResponsable);
         cnx.seleccionar(Educador.curps, cboEducadores);
     }
+    
+    public void obtenerBitacora(Bitacora bit){
+        jlFolio.setText(bit.folio);
+        jlFecha.setText(bit.tiempo);
+        jcboTipoB.setSelectedItem(bit.tipo);
+        jtextObservacionesB.setText(bit.observaciones);
+        cboInfante.setSelectedItem(bit.infantesC);
+        cboResponsable.setSelectedItem(bit.responsablesC);
+        cboEducadores.setSelectedItem(bit.educadoresC);
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -158,30 +168,37 @@ public class JDBitacora extends javax.swing.JDialog {
     }//GEN-LAST:event_btnRegistroActionPerformed
 
     private void btnActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarActionPerformed
-        /*Infante act = leerFormulario();
-        if(act.actualizar(cnx)> 0){
-            JOptionPane.showMessageDialog(this, "Infante registrado");
-        }else{
-            JOptionPane.showMessageDialog(this, "Error al registrar el Infante");
-        }*/
+        Bitacora bit = new Bitacora(
+    null, jlFecha.getText(), jcboTipoB.getSelectedItem().toString(),
+    jtextObservacionesB.getText(), cboInfante.getSelectedItem().toString(),
+    cboResponsable.getSelectedItem().toString(), cboEducadores.getSelectedItem().toString()
+            
+    );
+    if (bit.actualizar(cnx.con)==1) {
+            JOptionPane.showMessageDialog(this, "Bitacora Actualizado");
+            this.dispose();
+        } else {
+            JOptionPane.showMessageDialog(this, "Error de Registro");
+        }
     }//GEN-LAST:event_btnActualizarActionPerformed
 
     private void btnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarActionPerformed
-        /*Infante bor = leerFormulario();
-        int op =JOptionPane.showConfirmDialog(this, "Borrar al infante con CURP " + bor.curp + "?", "Confirmar",
-            JOptionPane.YES_NO_OPTION);
-        if(op == JOptionPane.YES_OPTION){
-            if (bor.borrar(cnx) > 0) {
-                JOptionPane.showMessageDialog(this, "Infante borrado");
-                Limpiar();
-            } else {
-                JOptionPane.showMessageDialog(this, "Error al borrar");
-            }
-        }*/
+        Bitacora bit = new Bitacora(
+    null, jlFecha.getText(), jcboTipoB.getSelectedItem().toString(),
+    jtextObservacionesB.getText(), cboInfante.getSelectedItem().toString(),
+    cboResponsable.getSelectedItem().toString(), cboEducadores.getSelectedItem().toString()
+            
+    );
+    if (bit.borrar(cnx.con)==1) {
+            JOptionPane.showMessageDialog(this, "Bitacora Actualizado");
+            this.dispose();
+        } else {
+            JOptionPane.showMessageDialog(this, "Error de Registro");
+        }
     }//GEN-LAST:event_btnBorrarActionPerformed
 
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
-        /*dispose();*/
+       this.dispose();
     }//GEN-LAST:event_btnCancelarActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

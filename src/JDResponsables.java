@@ -2,6 +2,8 @@
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import javax.swing.JOptionPane;
 
 /*
@@ -33,6 +35,16 @@ public class JDResponsables extends javax.swing.JFrame {
     
     public void ObtenerConexion(Conexion cnx) {
         this.cnx = cnx;
+    }
+    
+    public void obtenerResponsable(Responsable res){
+        jtCurpR.setText(res.curpr);
+        jtNombreR.setText(res.nombrer);
+        jcSexoR.setSelectedItem(res.sexor);
+        jtTelefonoR.setText(res.telefono);
+        jtParentescoR.setText(res.parentesco);
+        jcEstadoR.setSelectedItem(res.estador);
+        
     }
 
     /**
@@ -131,30 +143,33 @@ public class JDResponsables extends javax.swing.JFrame {
     }//GEN-LAST:event_btnRegistroActionPerformed
 
     private void btnActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarActionPerformed
-        /*Infante act = leerFormulario();
-        if(act.actualizar(cnx)> 0){
-            JOptionPane.showMessageDialog(this, "Infante registrado");
-        }else{
-            JOptionPane.showMessageDialog(this, "Error al registrar el Infante");
-        }*/
+        Responsable res = new Responsable(
+                jtCurpR.getText(), jtNombreR.getText(), jcSexoR.getSelectedItem().toString(),
+                jtTelefonoR.getText(), jtParentescoR.getText(), jcEstadoR.getSelectedItem().toString());
+
+        if (res.actualizar(cnx.con) == 1) {
+            JOptionPane.showMessageDialog(this, "Resposable Actualizado");
+            this.dispose();
+        } else {
+            JOptionPane.showMessageDialog(this, "Error de Registro");
+        }
     }//GEN-LAST:event_btnActualizarActionPerformed
 
     private void btnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarActionPerformed
-        /*Infante bor = leerFormulario();
-        int op =JOptionPane.showConfirmDialog(this, "Borrar al infante con CURP " + bor.curp + "?", "Confirmar",
-            JOptionPane.YES_NO_OPTION);
-        if(op == JOptionPane.YES_OPTION){
-            if (bor.borrar(cnx) > 0) {
-                JOptionPane.showMessageDialog(this, "Infante borrado");
-                Limpiar();
-            } else {
-                JOptionPane.showMessageDialog(this, "Error al borrar");
-            }
-        }*/
+       Responsable res = new Responsable(
+                jtCurpR.getText(), jtNombreR.getText(), jcSexoR.getSelectedItem().toString(),
+                jtTelefonoR.getText(), jtParentescoR.getText(), jcEstadoR.getSelectedItem().toString());
+
+        if (res.actualizar(cnx.con) == 1) {
+            JOptionPane.showMessageDialog(this, "Resposable Actualizado");
+            this.dispose();
+        } else {
+            JOptionPane.showMessageDialog(this, "Error de Registro");
+        }
     }//GEN-LAST:event_btnBorrarActionPerformed
 
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
-        /*dispose();*/
+        this.dispose();
     }//GEN-LAST:event_btnCancelarActionPerformed
 
     /**

@@ -10,6 +10,9 @@ public class Educador {
     
     String curpe, nombree, sexoe, telefonoe, direccion, estado;
 
+    public Educador(){
+        
+    }
     public Educador(String curpe, String nombree, String sexoe, String telefonoe,String direccion, String estado) {
         this.curpe = curpe;
         this.nombree = nombree;
