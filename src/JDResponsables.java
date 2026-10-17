@@ -5,6 +5,7 @@ import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import javax.swing.JOptionPane;
+import java.sql.*;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -23,16 +24,12 @@ public class JDResponsables extends javax.swing.JFrame {
      
     public JDResponsables() {
         initComponents();
-        setSize(440, 380);
+        setSize(470, 420);
         setLocationRelativeTo(null);
         setTitle("Datos de responsables");
-        /* try {
-            cnx =  DriverManager.getConnection("jdbc:mysql://localhost:3306/kindergarden", "root", "");
-        } catch (SQLException e) {
-            JOptionPane.showMessageDialog(this, "No se puede conectar: " +e.getMessage());
-        }*/
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
     }
-    
+
     public void ObtenerConexion(Conexion cnx) {
         this.cnx = cnx;
     }
@@ -73,6 +70,8 @@ public class JDResponsables extends javax.swing.JFrame {
         btnActualizar = new javax.swing.JButton();
         btnBorrar = new javax.swing.JButton();
         btnCancelar = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -125,6 +124,8 @@ public class JDResponsables extends javax.swing.JFrame {
         btnCancelar.setText("Cancelar");
         btnCancelar.addActionListener(this::btnCancelarActionPerformed);
         getContentPane().add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 320, -1, -1));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 0, 30, 380));
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 366, 460, 20));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -143,6 +144,7 @@ public class JDResponsables extends javax.swing.JFrame {
     }//GEN-LAST:event_btnRegistroActionPerformed
 
     private void btnActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarActionPerformed
+
         Responsable res = new Responsable(
                 jtCurpR.getText(), jtNombreR.getText(), jcSexoR.getSelectedItem().toString(),
                 jtTelefonoR.getText(), jtParentescoR.getText(), jcEstadoR.getSelectedItem().toString());
@@ -153,6 +155,7 @@ public class JDResponsables extends javax.swing.JFrame {
         } else {
             JOptionPane.showMessageDialog(this, "Error de Registro");
         }
+         
     }//GEN-LAST:event_btnActualizarActionPerformed
 
     private void btnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarActionPerformed
@@ -160,8 +163,8 @@ public class JDResponsables extends javax.swing.JFrame {
                 jtCurpR.getText(), jtNombreR.getText(), jcSexoR.getSelectedItem().toString(),
                 jtTelefonoR.getText(), jtParentescoR.getText(), jcEstadoR.getSelectedItem().toString());
 
-        if (res.actualizar(cnx.con) == 1) {
-            JOptionPane.showMessageDialog(this, "Resposable Actualizado");
+        if (res.borrar(cnx.con) == 1) {
+            JOptionPane.showMessageDialog(this, "Resposable Borrado");
             this.dispose();
         } else {
             JOptionPane.showMessageDialog(this, "Error de Registro");
@@ -209,6 +212,8 @@ public class JDResponsables extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JComboBox<String> jcEstadoR;
     private javax.swing.JComboBox<String> jcSexoR;
     private javax.swing.JTextField jtCurpR;

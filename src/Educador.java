@@ -25,7 +25,7 @@ public class Educador {
     public int insertar(Connection con){
         int resultado = 0;
         try {
-            String sql = "INSERT INTO educadores VALUES(?, ?, ?, ?, ?, ?)";
+            String sql = "INSERT INTO educadores (curpe, nombree, sexoe, telefonoe, direccion, estadoe) VALUES (?, ?, ?, ?, ?, ?)";
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setString(1, nombree);
             ps.setString(2, sexoe);
@@ -59,14 +59,14 @@ public class Educador {
             public int actualizar(Connection  con){
             int resultado =0;
             try {
-                String sql ="UPDATE educadores SET nombree = ?,  sexoe = ?  telefonoe = ?,  direccion= ?,  estadoe =? WHERE curpe = ?";
+                String sql ="UPDATE educadores SET nombree = ?,  sexoe = ?,  telefonoe = ?,  direccion= ?,  estadoe =? WHERE curpe = ?";
                 PreparedStatement ps = con.prepareStatement(sql);
-                ps.setString(1, curpe);
-                ps.setString(2, nombree);
-                ps.setString(3, sexoe);
-                ps.setString(4, telefonoe);
-                ps.setString(5, direccion);
-                ps.setString(6, estado);
+                ps.setString(1, nombree);
+                ps.setString(2, sexoe);
+                ps.setString(3, telefonoe);
+                ps.setString(4, direccion);
+                ps.setString(5, estado);
+                ps.setString(6, curpe);
                                 
                 return ps.executeUpdate();
                 

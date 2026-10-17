@@ -16,12 +16,6 @@ public class JDInfantes extends javax.swing.JDialog {
         setSize(440, 380);
         setLocationRelativeTo(null);
         setTitle("Datos del Infante");
-        jsFecha.setEditor(new javax.swing.JSpinner.DateEditor(jsFecha, "yyyy-MM-dd"));
-            /*try {
-            cnx =  DriverManager.getConnection("jdbc:mysql://localhost:3306/kindergarden", "root", "");
-        } catch (SQLException e) {
-            JOptionPane.showMessageDialog(this, "No se puede conectar: " +e.getMessage());
-        }*/
     }
     
     public void ObtenerConexion(Conexion cnx){

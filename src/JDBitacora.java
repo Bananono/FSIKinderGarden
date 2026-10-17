@@ -15,15 +15,10 @@ public class JDBitacora extends javax.swing.JDialog {
     public JDBitacora(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
-        setSize(440, 500);
+        setSize(430, 550);
         setLocationRelativeTo(null);
         setTitle("Bitacora");
-        //jsFechaB.setEditor(new javax.swing.JSpinner.DateEditor(jsFechaB, "yyyy-MM-dd"));
-           /* try {
-            cnx =  DriverManager.getConnection("jdbc:mysql://localhost:3306/kindergarden", "root", "");
-        } catch (SQLException e) {
-            JOptionPane.showMessageDialog(this, "No se puede conectar: " +e.getMessage());
-        }*/
+        
     }
     public void ObtenerConexion(Conexion cnx) {
         this.cnx = cnx;
@@ -73,6 +68,8 @@ public class JDBitacora extends javax.swing.JDialog {
         jlFecha = new javax.swing.JLabel();
         jlFolio = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -148,6 +145,8 @@ public class JDBitacora extends javax.swing.JDialog {
         jButton1.setText("Hoy");
         jButton1.addActionListener(this::jButton1ActionPerformed);
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(292, 90, 70, 30));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(398, 0, 30, 540));
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 516, 430, 30));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -168,8 +167,11 @@ public class JDBitacora extends javax.swing.JDialog {
     }//GEN-LAST:event_btnRegistroActionPerformed
 
     private void btnActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarActionPerformed
+        try {
+            
+        
         Bitacora bit = new Bitacora(
-    null, jlFecha.getText(), jcboTipoB.getSelectedItem().toString(),
+    jlFolio.getText(), jlFecha.getText(), jcboTipoB.getSelectedItem().toString(),
     jtextObservacionesB.getText(), cboInfante.getSelectedItem().toString(),
     cboResponsable.getSelectedItem().toString(), cboEducadores.getSelectedItem().toString()
             
@@ -180,17 +182,20 @@ public class JDBitacora extends javax.swing.JDialog {
         } else {
             JOptionPane.showMessageDialog(this, "Error de Registro");
         }
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(this, "Error en: " +e);
+        }
     }//GEN-LAST:event_btnActualizarActionPerformed
 
     private void btnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarActionPerformed
         Bitacora bit = new Bitacora(
-    null, jlFecha.getText(), jcboTipoB.getSelectedItem().toString(),
+    jlFolio.getText(), jlFecha.getText(), jcboTipoB.getSelectedItem().toString(),
     jtextObservacionesB.getText(), cboInfante.getSelectedItem().toString(),
     cboResponsable.getSelectedItem().toString(), cboEducadores.getSelectedItem().toString()
             
     );
     if (bit.borrar(cnx.con)==1) {
-            JOptionPane.showMessageDialog(this, "Bitacora Actualizado");
+            JOptionPane.showMessageDialog(this, "Bitacora Borrada");
             this.dispose();
         } else {
             JOptionPane.showMessageDialog(this, "Error de Registro");
@@ -260,6 +265,8 @@ public class JDBitacora extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JComboBox<String> jcboTipoB;
     private javax.swing.JLabel jlFecha;

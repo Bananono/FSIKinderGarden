@@ -12,14 +12,10 @@ public class JDEducadores extends javax.swing.JFrame {
     
     public JDEducadores() {
         initComponents();
-        setSize(440, 380);
+        setSize(450, 430);
         setLocationRelativeTo(null);
         setTitle("Datos de educadores");
-        /* try {
-            cnx =  DriverManager.getConnection("jdbc:mysql://localhost:3306/kindergarden", "root", "");
-        } catch (SQLException e) {
-            JOptionPane.showMessageDialog(this, "No se puede conectar: " +e.getMessage());
-        }*/
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE); //para que se cierre todo el programa
     }
     
     public void ObtenerConexion(Conexion cnx) {
@@ -62,6 +58,8 @@ public class JDEducadores extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         cboEstado = new javax.swing.JComboBox<>();
         jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -114,6 +112,8 @@ public class JDEducadores extends javax.swing.JFrame {
 
         jLabel7.setText("Estado");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 290, 80, 20));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 390, 350, 20));
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 0, 30, 410));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -199,6 +199,8 @@ public class JDEducadores extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JComboBox<String> jcbSexoE;
     private javax.swing.JTextField jtCurpE;
     private javax.swing.JTextField jtDireccionE;

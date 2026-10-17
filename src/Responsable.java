@@ -59,7 +59,7 @@ public class Responsable {
             public int actualizar(Connection  con){
             int resultado =0;
             try {
-                String sql ="UPDATE responsables SET nombrer = ?, sexor = ? telefono = ?, parentesco = ?, estador =? WHERE curpr = ?";
+                String sql ="UPDATE responsables SET nombrer = ?, sexor = ?, telefono = ?, parentesco = ?, estador =? WHERE curpr = ?";
                 PreparedStatement ps = con.prepareStatement(sql);
                 ps.setString(1, nombrer);
                 ps.setString(2, sexor);

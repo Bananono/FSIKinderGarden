@@ -184,7 +184,7 @@ public class FPrincipal extends javax.swing.JFrame {
             di1.obtenerEducador(CrearEducador());
             di1.setVisible(true);
         }else if(JTutores.isSelected()){
-            JDResponsables di2 = new JDResponsables();
+            JDResponsables di2 = new JDResponsables(); //ejemplo aqui antes puse this y true y se creo algo nuevo
             di2.obtenerResponsable(CrearResponsable());
             di2.ObtenerConexion(cnx);
             di2.setVisible(true);
@@ -254,11 +254,12 @@ public Responsable CrearResponsable(){
     int ren = TQuery.getSelectedRow();
     Responsable res = new Responsable();
     if (ren >=0) {
-        res.curpr= modelo.getValueAt(ren, 0).toString();
-        res.nombrer= modelo.getValueAt(ren, 1).toString();
-        res.sexor= modelo.getValueAt(ren, 2).toString();
-        res.parentesco= modelo.getValueAt(ren, 3).toString();
-        res.estador= modelo.getValueAt(ren, 4).toString();
+         res.curpr      = modelo.getValueAt(ren, 0).toString();
+         res.nombrer    = modelo.getValueAt(ren, 1).toString();
+         res.sexor      = modelo.getValueAt(ren, 2).toString();
+         res.telefono   = modelo.getValueAt(ren, 3).toString();
+         res.parentesco = modelo.getValueAt(ren, 4).toString();
+         res.estador    = modelo.getValueAt(ren, 5).toString(); 
     } else {
         JOptionPane.showMessageDialog(this, "Selecciona un renglon de la tabla");
       }
@@ -293,7 +294,7 @@ public Bitacora CrearBitacora(){
         bit.observaciones= modelo.getValueAt(ren, 3).toString();
         bit.infantesC= modelo.getValueAt(ren, 4).toString();
         bit.responsablesC= modelo.getValueAt(ren, 5).toString();
-        bit.educadoresC= modelo.getValueAt(ren, 5).toString();
+        bit.educadoresC= modelo.getValueAt(ren, 6).toString();
     } else {
         JOptionPane.showMessageDialog(this, "Selecciona un renglon de la tabla");
       }
