@@ -85,70 +85,71 @@ public class JDInfantes extends javax.swing.JDialog {
 
         jLabel1.setText("CURP:");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(80, 70, 37, 16);
+        jLabel1.setBounds(80, 120, 37, 16);
 
         jLabel2.setText("Nombre:");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(70, 110, 63, 16);
+        jLabel2.setBounds(70, 160, 63, 16);
 
         jLabel3.setText("Sexo:");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(80, 160, 63, 16);
+        jLabel3.setBounds(80, 210, 63, 16);
 
         jLabel4.setText("Fecha de nacimiento");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(40, 190, 110, 16);
+        jLabel4.setBounds(40, 240, 110, 16);
 
         jLabel5.setText("Estado:");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(80, 230, 72, 25);
+        jLabel5.setBounds(80, 280, 72, 25);
         getContentPane().add(jtNombreI);
-        jtNombreI.setBounds(170, 100, 220, 30);
+        jtNombreI.setBounds(170, 150, 220, 30);
         getContentPane().add(jTCurp);
-        jTCurp.setBounds(170, 60, 220, 30);
+        jTCurp.setBounds(170, 110, 220, 30);
 
         jcSexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Femenino", "Otro" }));
         getContentPane().add(jcSexo);
-        jcSexo.setBounds(170, 150, 100, 22);
+        jcSexo.setBounds(170, 200, 100, 22);
 
         jsFecha.setModel(new javax.swing.SpinnerDateModel());
         getContentPane().add(jsFecha);
-        jsFecha.setBounds(170, 190, 140, 22);
+        jsFecha.setBounds(170, 240, 140, 22);
 
         jcEstado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "activo", "inactivo" }));
         jcEstado.addActionListener(this::jcEstadoActionPerformed);
         getContentPane().add(jcEstado);
-        jcEstado.setBounds(170, 230, 76, 22);
+        jcEstado.setBounds(170, 280, 76, 22);
 
         btnRegistrar.setText("Registrar");
         btnRegistrar.addActionListener(this::btnRegistrarActionPerformed);
         getContentPane().add(btnRegistrar);
-        btnRegistrar.setBounds(30, 300, 80, 23);
+        btnRegistrar.setBounds(30, 350, 80, 23);
 
         btnCancelar.setText("Cancelar");
         btnCancelar.addActionListener(this::btnCancelarActionPerformed);
         getContentPane().add(btnCancelar);
-        btnCancelar.setBounds(300, 300, 76, 23);
+        btnCancelar.setBounds(300, 350, 76, 23);
 
         btnActualizar.setText("Actualizar");
         btnActualizar.addActionListener(this::btnActualizarActionPerformed);
         getContentPane().add(btnActualizar);
-        btnActualizar.setBounds(120, 300, 82, 23);
+        btnActualizar.setBounds(120, 350, 82, 23);
 
         btnBorrar.setText("Borrar");
         btnBorrar.addActionListener(this::btnBorrarActionPerformed);
         getContentPane().add(btnBorrar);
-        btnBorrar.setBounds(220, 300, 72, 23);
+        btnBorrar.setBounds(220, 350, 72, 23);
 
         jLabel6.setText("Datos del infante");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(10, 40, 148, 24);
+        jLabel6.setBounds(10, 90, 148, 24);
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(204, 0, 0));
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagen2.png"))); // NOI18N
         jLabel7.setText("Infantes");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(100, 0, 170, 30);
+        jLabel7.setBounds(90, 10, 180, 70);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

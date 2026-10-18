@@ -57,7 +57,6 @@ public class JDBitacora extends javax.swing.JDialog {
         jcboTipoB = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
         jtextObservacionesB = new javax.swing.JTextArea();
-        jLabel12 = new javax.swing.JLabel();
         btnRegistro = new javax.swing.JButton();
         btnActualizar = new javax.swing.JButton();
         btnBorrar = new javax.swing.JButton();
@@ -70,83 +69,85 @@ public class JDBitacora extends javax.swing.JDialog {
         jButton1 = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setText("Responsable_curp");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 110, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 390, 110, -1));
 
         jLabel2.setText("Folio:");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 37, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 37, -1));
 
         jLabel3.setText("Fecha:");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 37, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 37, -1));
 
         jLabel4.setText("Tipo:");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 37, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 37, -1));
 
         jLabel5.setText("Infante_curp");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 70, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 70, -1));
 
         jLabel6.setText("Observaciones:");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 90, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, 90, -1));
 
         jLabel7.setText("Educador_curp");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 390, 90, -1));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 440, 90, -1));
 
         jcboTipoB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Entrada", "Salida" }));
-        getContentPane().add(jcboTipoB, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 130, 100, -1));
+        getContentPane().add(jcboTipoB, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 180, 100, -1));
 
         jtextObservacionesB.setColumns(20);
         jtextObservacionesB.setRows(5);
         jScrollPane1.setViewportView(jtextObservacionesB);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 180, -1, -1));
-
-        jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(204, 0, 0));
-        jLabel12.setText("Bitacora");
-        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 230, 40));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 230, -1, -1));
 
         btnRegistro.setText("Registrar");
         btnRegistro.addActionListener(this::btnRegistroActionPerformed);
-        getContentPane().add(btnRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 470, -1, -1));
+        getContentPane().add(btnRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 520, -1, -1));
 
         btnActualizar.setText("Actualizar");
         btnActualizar.addActionListener(this::btnActualizarActionPerformed);
-        getContentPane().add(btnActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 470, -1, -1));
+        getContentPane().add(btnActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 520, -1, -1));
 
         btnBorrar.setText("Borrar");
         btnBorrar.addActionListener(this::btnBorrarActionPerformed);
-        getContentPane().add(btnBorrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 470, -1, -1));
+        getContentPane().add(btnBorrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 520, -1, -1));
 
         btnCancelar.setText("Cancelar");
         btnCancelar.addActionListener(this::btnCancelarActionPerformed);
-        getContentPane().add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 470, -1, -1));
+        getContentPane().add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 520, -1, -1));
 
         cboInfante.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(cboInfante, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 290, 150, -1));
+        getContentPane().add(cboInfante, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 340, 150, -1));
 
         cboResponsable.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(cboResponsable, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 340, 160, -1));
+        getContentPane().add(cboResponsable, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 390, 160, -1));
 
         cboEducadores.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(cboEducadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 390, 160, -1));
+        getContentPane().add(cboEducadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 440, 160, -1));
 
         jlFecha.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
-        getContentPane().add(jlFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 90, 150, 30));
+        getContentPane().add(jlFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 140, 150, 30));
 
         jlFolio.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        getContentPane().add(jlFolio, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 150, 20));
+        getContentPane().add(jlFolio, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, 150, 20));
 
         jButton1.setBackground(new java.awt.Color(0, 0, 0));
         jButton1.setForeground(new java.awt.Color(204, 0, 0));
         jButton1.setText("Hoy");
         jButton1.addActionListener(this::jButton1ActionPerformed);
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(292, 90, 70, 30));
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(398, 0, 30, 540));
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 516, 430, 30));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 140, 70, 30));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 0, 30, 540));
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 560, 430, 30));
+
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(204, 0, 0));
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagen1.png"))); // NOI18N
+        jLabel10.setText("BITACORA");
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, 190, 90));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -258,7 +259,7 @@ public class JDBitacora extends javax.swing.JDialog {
     private javax.swing.JComboBox<String> cboResponsable;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

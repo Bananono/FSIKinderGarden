@@ -66,53 +66,54 @@ public class JDEducadores extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(204, 0, 0));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagen3.png"))); // NOI18N
         jLabel1.setText("Educadores");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(46, 6, 226, 40));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, 210, 70));
 
         jLabel2.setText("CURP:");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 60, 50, 20));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, 50, 20));
 
         jLabel3.setText("Nombre:");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 110, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, -1, -1));
 
         jLabel4.setText("Sexo:");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, -1, -1));
 
         jcbSexoE.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Femenino", "Otro" }));
-        getContentPane().add(jcbSexoE, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 150, -1, -1));
-        getContentPane().add(jtCurpE, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 220, -1));
-        getContentPane().add(jtNombreE, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 100, 220, -1));
+        getContentPane().add(jcbSexoE, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 190, -1, -1));
+        getContentPane().add(jtCurpE, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 100, 220, -1));
+        getContentPane().add(jtNombreE, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 140, 220, -1));
 
         jLabel5.setText("Telefono:");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, 60, 20));
-        getContentPane().add(jtTelefonoE, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 200, 220, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 240, 60, 20));
+        getContentPane().add(jtTelefonoE, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 240, 220, -1));
 
         jLabel6.setText("Direccion:");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, 70, 20));
-        getContentPane().add(jtDireccionE, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 250, 220, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 290, 70, 20));
+        getContentPane().add(jtDireccionE, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 290, 220, -1));
 
         btnRegistrar.setText("Registrar");
         btnRegistrar.addActionListener(this::btnRegistrarActionPerformed);
-        getContentPane().add(btnRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 350, -1, -1));
+        getContentPane().add(btnRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 390, -1, -1));
 
         jButton2.setText("Actualizar");
         jButton2.addActionListener(this::jButton2ActionPerformed);
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 350, -1, -1));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 390, -1, -1));
 
         jButton3.setText("Borrar");
         jButton3.addActionListener(this::jButton3ActionPerformed);
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 350, -1, -1));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 390, -1, -1));
 
         jButton1.setText("Cancelar");
         jButton1.addActionListener(this::jButton1ActionPerformed);
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 350, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 390, -1, -1));
 
         cboEstado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Activo", "Pasivo", " " }));
-        getContentPane().add(cboEstado, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 290, 80, -1));
+        getContentPane().add(cboEstado, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 330, 80, -1));
 
         jLabel7.setText("Estado");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 290, 80, 20));
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 390, 350, 20));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 330, 80, 20));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 430, 350, 20));
         getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 0, 30, 410));
 
         pack();

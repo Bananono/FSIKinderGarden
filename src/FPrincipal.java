@@ -30,8 +30,8 @@ public class FPrincipal extends javax.swing.JFrame {
         buttonGroup1 = new javax.swing.ButtonGroup();
         jToolBar1 = new javax.swing.JToolBar();
         JInfantes = new javax.swing.JToggleButton();
-        JEducadores = new javax.swing.JToggleButton();
         JTutores = new javax.swing.JToggleButton();
+        JEducadores = new javax.swing.JToggleButton();
         JBitacora = new javax.swing.JToggleButton();
         jBBnuevoutton1 = new javax.swing.JButton();
         BEditar = new javax.swing.JButton();
@@ -44,66 +44,78 @@ public class FPrincipal extends javax.swing.JFrame {
 
         jToolBar1.setRollover(true);
 
+        JInfantes.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroup1.add(JInfantes);
         JInfantes.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         JInfantes.setForeground(new java.awt.Color(204, 0, 0));
         JInfantes.setSelected(true);
         JInfantes.setText("Infantes");
+        JInfantes.setBorder(null);
         JInfantes.setFocusable(false);
         JInfantes.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         JInfantes.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         JInfantes.addActionListener(this::JInfantesActionPerformed);
         jToolBar1.add(JInfantes);
 
-        buttonGroup1.add(JEducadores);
-        JEducadores.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        JEducadores.setForeground(new java.awt.Color(204, 0, 0));
-        JEducadores.setText("Educadores");
-        JEducadores.setFocusable(false);
-        JEducadores.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        JEducadores.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        JEducadores.addActionListener(this::JEducadoresActionPerformed);
-        jToolBar1.add(JEducadores);
-
+        JTutores.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroup1.add(JTutores);
         JTutores.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         JTutores.setForeground(new java.awt.Color(204, 0, 0));
         JTutores.setText("Tutores/Responsables");
+        JTutores.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         JTutores.setFocusable(false);
         JTutores.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         JTutores.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         JTutores.addActionListener(this::JTutoresActionPerformed);
         jToolBar1.add(JTutores);
 
+        JEducadores.setBackground(new java.awt.Color(0, 0, 0));
+        buttonGroup1.add(JEducadores);
+        JEducadores.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        JEducadores.setForeground(new java.awt.Color(204, 0, 0));
+        JEducadores.setText("Educadores");
+        JEducadores.setBorder(null);
+        JEducadores.setFocusable(false);
+        JEducadores.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        JEducadores.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        JEducadores.addActionListener(this::JEducadoresActionPerformed);
+        jToolBar1.add(JEducadores);
+
+        JBitacora.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroup1.add(JBitacora);
         JBitacora.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         JBitacora.setForeground(new java.awt.Color(204, 0, 0));
         JBitacora.setText("Bitacora");
+        JBitacora.setBorder(null);
         JBitacora.setFocusable(false);
         JBitacora.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         JBitacora.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         JBitacora.addActionListener(this::JBitacoraActionPerformed);
         jToolBar1.add(JBitacora);
 
+        jBBnuevoutton1.setBackground(new java.awt.Color(153, 0, 0));
         jBBnuevoutton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jBBnuevoutton1.setForeground(new java.awt.Color(255, 0, 0));
+        jBBnuevoutton1.setForeground(new java.awt.Color(0, 0, 0));
         jBBnuevoutton1.setText("Nuevo");
+        jBBnuevoutton1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jBBnuevoutton1.setFocusable(false);
         jBBnuevoutton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jBBnuevoutton1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jBBnuevoutton1.addActionListener(this::jBBnuevoutton1ActionPerformed);
         jToolBar1.add(jBBnuevoutton1);
 
+        BEditar.setBackground(new java.awt.Color(153, 0, 0));
         BEditar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        BEditar.setForeground(new java.awt.Color(204, 0, 0));
+        BEditar.setForeground(new java.awt.Color(0, 0, 0));
         BEditar.setText("Editar");
+        BEditar.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         BEditar.setFocusable(false);
         BEditar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         BEditar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         BEditar.addActionListener(this::BEditarActionPerformed);
         jToolBar1.add(BEditar);
 
-        getContentPane().add(jToolBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, 52));
+        getContentPane().add(jToolBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, 60));
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -120,7 +132,7 @@ public class FPrincipal extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(TQuery);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, 530));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 690, 520));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 58, -1, -1));
 
