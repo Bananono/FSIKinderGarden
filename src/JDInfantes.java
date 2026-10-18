@@ -13,7 +13,7 @@ public class JDInfantes extends javax.swing.JDialog {
     public JDInfantes(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
-        setSize(440, 380);
+        setSize(440, 420);
         setLocationRelativeTo(null);
         setTitle("Datos del Infante");
     }

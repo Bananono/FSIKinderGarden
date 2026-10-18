@@ -24,7 +24,7 @@ public class JDResponsables extends javax.swing.JFrame {
      
     public JDResponsables() {
         initComponents();
-        setSize(470, 420);
+        setSize(470, 450);
         setLocationRelativeTo(null);
         setTitle("Datos de responsables");
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);

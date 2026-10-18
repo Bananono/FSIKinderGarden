@@ -15,7 +15,7 @@ public class JDBitacora extends javax.swing.JDialog {
     public JDBitacora(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
-        setSize(430, 550);
+        setSize(430, 600);
         setLocationRelativeTo(null);
         setTitle("Bitacora");
         
